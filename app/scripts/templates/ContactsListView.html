@@ -1,13 +1,19 @@
 <h1>Contact Lists</h1>
-<table>
-  <tbody>
-  <% _.each(contacts, function(contact){ %>
-    <tr>
-      <td><%= contact.get("name") %></td>
-      <td><%= contact.get("email") %><br /><%= contact.get("phone") %></td>
-      <td><a href="#/edit/<%= contact.id %>">Edit</a></td>
-    </tr>
-  <% }); %>
-  </tbody>
-</table>
-<a href="#/new">Add new</a>
+<div class="row">
+    <div class="col-md-5">
+        <div class="scrollable">
+            <table class="add10right table table-striped">
+                <tbody>
+                <% _.each(contacts, function(contact){ %>
+                <tr>
+                    <td><%= contact.get("name") %></td>
+                    <td><%= contact.get("email") %><br /><%= contact.get("phone") %></td>
+                    <td><a href="#/edit/<%= contact.id %>">Edit</a></td>
+                </tr>
+                <% }); %>
+                </tbody>
+            </table>
+        </div>
+        <a class="move20down float-right btn btn-primary" href="#/new">Add new</a>
+    </div>
+</div>

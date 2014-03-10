@@ -1,7 +1,8 @@
 define([
-	'views/AppView'
+	'views/AppView',
+  'router'
 ], 
-function (AppView) {
+function (AppView, Router) {
   var App = function () {
   	var view, vent = _.extend({}, Backbone.Events);
 
@@ -9,6 +10,7 @@ function (AppView) {
   		vent : vent
   	}).render();
   };
+
 
   return App;
 });
