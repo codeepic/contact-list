@@ -11,8 +11,8 @@ define(["views/EditContactView"], function(EditContactView){
   var router = new Router();
 
   router.on("route:editContact", function(id){
-    console.log("add new contact or edit existing one");
-   contact.render({id: id})
+    console.log("add new contact or edit existing one " + id);
+   contact.render(/*{id: id}*/);
   });
 
   Backbone.history.start();

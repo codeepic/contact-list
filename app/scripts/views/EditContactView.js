@@ -4,7 +4,7 @@ define(
   function(template, Contact){
   var EditUser = Backbone.View.extend({
     el: "#dialog",
-    render: function(options){
+    render: function(options){  //options is undefined
       var that = this;
       if(options.id){
         //GET request - fetch contact from collection and update it
@@ -16,7 +16,9 @@ define(
           }
         });
       }else{
-
+         //render a form to add new user
+        var template = _.template(template, {contact: null});
+        this.$el.html(template);
       }
     }
   });
